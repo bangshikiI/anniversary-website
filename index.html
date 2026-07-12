@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>four years of us</title>
+<meta name="description" content="kei & val — four years of us">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Cormorant+Garamond:ital@0;1&family=Inter:wght@400;500;600&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="preload" as="image" href="assets/images/hero/hero-main.jpg">
+</head>
+<body>
+
+<!-- passcode gate -->
+<div id="passcode-gate">
+  <div class="passcode-box">
+    <p class="hand">this one's just for you, love.</p>
+    <input type="password" id="passcode-input" placeholder="enter the passcode" inputmode="numeric" autocomplete="off">
+    <button id="passcode-submit" class="btn btn-solid" style="width:100%; justify-content:center;">unlock</button>
+    <div id="passcode-error"></div>
+  </div>
+</div>
+
+<!-- loading screen -->
+<div id="loading-screen">
+  <p id="loading-text">collecting our memories...</p>
+  <div class="loading-bar"></div>
+</div>
+
+<button id="music-toggle" aria-label="toggle music">♪</button>
+
+<!-- hero -->
+<section id="hero">
+  <img id="hero-photo" src="assets/images/hero/hero-main.jpg" alt="kei and val">
+  <div class="hero-content">
+    <h1 class="hero-tag" id="hero-tagline">four years of us.</h1>
+    <p class="hero-dates" id="hero-dates">february 14, 2023 — february 14, 2027</p>
+    <div class="hero-actions">
+      <a href="#dedication" class="btn btn-solid" id="hero-cta">open our story</a>
+      <button class="btn" id="hero-play-music">this one's better with sound. play it, love? ♪</button>
+    </div>
+  </div>
+</section>
+
+<!-- dedication -->
+<section id="dedication" class="section">
+  <div class="dedication-card fade-up">
+    <p id="dedication-text"></p>
+  </div>
+</section>
+
+<!-- story of us -->
+<section id="story" class="section section-alt">
+  <span class="eyebrow fade-up">the story of us</span>
+  <h2 class="section-heading fade-up">i still didn't think you will like me back</h2>
+  <div id="story-blocks"></div>
+  <p class="pull-quote fade-up" id="pull-quote"></p>
+</section>
+
+<!-- timeline -->
+<section id="timeline" class="section">
+  <span class="eyebrow fade-up">the timeline</span>
+  <h2 class="section-heading fade-up">from admiring you to choosing you, again and again</h2>
+  <div class="timeline-wrap">
+    <div id="timeline-list"></div>
+  </div>
+</section>
+
+<!-- scrapbook -->
+<section id="scrapbook" class="section section-alt">
+  <span class="eyebrow fade-up">the scrapbook</span>
+  <h2 class="section-heading fade-up">digital scrapbook</h2>
+  <p class="section-sub fade-up">a few favorites, kept exactly as messy and real as they were.</p>
+  <div class="scrapbook-grid" id="scrapbook-grid"></div>
+</section>
+
+<!-- ordinary moments -->
+<section id="ordinary" class="section">
+  <span class="eyebrow fade-up">nothing special, and everything</span>
+  <h2 class="section-heading fade-up">our ordinary moments</h2>
+  <div class="newspaper fade-up">
+    <div class="newspaper-header">
+      <span>special edition</span>
+      <span class="newspaper-title">about us</span>
+      <span>our archive</span>
+    </div>
+    <div class="newspaper-sub">
+      <span>our song: libu-libong buwan — kyle raphael</span>
+      <span class="newspaper-date">feb 14, 2027</span>
+    </div>
+    <div class="newspaper-flood" id="newspaper-flood"></div>
+    <div class="newspaper-overlay">
+      <div class="photobooth-strip">
+        <img src="assets/images/medium/senior-high-009.jpg" alt="kei and val">
+        <img src="assets/images/medium/college-057.jpg" alt="kei and val">
+        <img src="assets/images/medium/college-092.jpg" alt="kei and val">
+        <img src="assets/images/medium/college-025.jpg" alt="kei and val">
+      </div>
+      <div class="newspaper-note">still the best yes i ever got.</div>
+      <div class="newspaper-polaroid">
+        <img src="assets/images/medium/college-035.jpg" alt="kei and val">
+        <span>"you look like you love me..."</span>
+      </div>
+      <p class="newspaper-quote">"my love for you is bigger than words could ever hold, so i chose to build this instead."</p>
+    </div>
+  </div>
+</section>
+
+<!-- our songs -->
+<section id="songs" class="section section-alt">
+  <span class="eyebrow fade-up">the playlist</span>
+  <h2 class="section-heading fade-up" style="text-align:center;">our songs</h2>
+  <div class="player-card fade-up" id="player-card"></div>
+  <p class="player-reason fade-up" id="player-reason"></p>
+</section>
+
+<!-- open when letters -->
+<section id="letters" class="section">
+  <span class="eyebrow fade-up">open when...</span>
+  <h2 class="section-heading fade-up">letters for the harder days, and the good ones</h2>
+  <div class="letters-grid" id="letters-grid"></div>
+</section>
+
+<!-- reasons i love her -->
+<section id="reasons" class="section section-alt">
+  <span class="eyebrow fade-up">no particular order</span>
+  <h2 class="section-heading fade-up">reasons i love her</h2>
+  <div class="reasons-stack" id="reasons-stack"></div>
+</section>
+
+<!-- gallery -->
+<section id="gallery" class="section">
+  <span class="eyebrow fade-up">the archive</span>
+  <h2 class="section-heading fade-up">photo & video gallery</h2>
+  <div class="filter-bar" id="filter-bar"></div>
+  <div class="gallery-grid" id="gallery-grid"></div>
+</section>
+
+<!-- main letter -->
+<section id="main-letter" class="section section-alt">
+  <span class="eyebrow fade-up">for february 14, 2027</span>
+  <h2 class="section-heading fade-up">the main letter</h2>
+  <div class="seal-wrap fade-up">
+    <div class="seal-envelope" id="seal-envelope" tabindex="0" role="button" aria-label="open the letter">
+      <div class="seal-dot">open</div>
+    </div>
+    <a href="#" class="skip-link" id="skip-animation">click this</a>
+  </div>
+  <div class="letter-panel" id="letter-panel">
+    <p class="letter-date" id="letter-date"></p>
+    <p class="letter-greeting" id="letter-greeting"></p>
+    <div id="letter-body-text"></div>
+    <p class="letter-sign" id="letter-sign-off"></p>
+    <div class="letter-actions">
+      <a href="assets/downloads/main-anniversary-letter.pdf" download class="btn btn-solid">download this letter</a>
+    </div>
+  </div>
+</section>
+
+<!-- four years in numbers -->
+<section id="numbers" class="section">
+  <span class="eyebrow fade-up" style="text-align:center; display:block;">by the numbers</span>
+  <h2 class="section-heading fade-up" style="text-align:center;">four years, in numbers</h2>
+  <div class="numbers-grid" id="numbers-grid"></div>
+</section>
+
+<!-- future memories -->
+<section id="future" class="section section-alt">
+  <span class="eyebrow fade-up">still going</span>
+  <h2 class="section-heading fade-up">future memories</h2>
+  <p class="section-sub fade-up">this archive is still growing.</p>
+  <div class="future-grid" id="future-grid"></div>
+</section>
+
+<!-- closing -->
+<section id="closing" class="section">
+  <img class="closing-photo fade-up" src="assets/images/hero/closing-main.jpg" alt="kei and val">
+  <h2 class="closing-headline fade-up" id="closing-headline"></h2>
+  <p class="closing-body fade-up" id="closing-body"></p>
+  <p class="closing-date fade-up" id="closing-date"></p>
+  <p class="closing-body fade-up" id="closing-sign" style="font-family: var(--font-display); font-style: italic;"></p>
+  <div class="closing-actions fade-up">
+    <button class="btn" id="back-to-top">back to top ↑</button>
+  </div>
+</section>
+
+<footer>
+  <p>made by val, for you, mylove</p>
+  <button id="flower-secret" aria-label="a small secret">🌸</button>
+</footer>
+
+<!-- letter modal (open-when + bonus) -->
+<div class="modal-overlay" id="letter-overlay">
+  <div class="modal-box" id="letter-modal-box">
+    <button class="modal-close" id="letter-modal-close" aria-label="close">✕</button>
+    <h4 id="letter-modal-title"></h4>
+    <p id="letter-modal-body"></p>
+    <div id="letter-modal-video" style="display:none; margin-top:20px;">
+      <video id="letter-modal-video-el" controls playsinline style="width:100%; border-radius:6px;"></video>
+    </div>
+  </div>
+</div>
+
+<!-- lightbox -->
+<div class="modal-overlay" id="lightbox-overlay">
+  <button class="lightbox-nav" id="lightbox-prev" aria-label="previous photo">‹</button>
+  <div class="modal-box lightbox-box">
+    <img id="lightbox-img" src="" alt="">
+    <p class="lightbox-counter" id="lightbox-counter"></p>
+  </div>
+  <button class="lightbox-nav" id="lightbox-next" aria-label="next photo">›</button>
+  <button class="modal-close" id="lightbox-close" aria-label="close" style="position:fixed; top:20px; right:20px;">✕</button>
+</div>
+
+<!-- content data -->
+<script src="content/site-text.js"></script>
+<script src="content/timeline.js"></script>
+<script src="content/gallery-data.js"></script>
+<script src="content/letters.js"></script>
+<script src="content/playlist.js"></script>
+<script src="content/captions.js"></script>
+<script src="content/main-letter.js"></script>
+
+<!-- behavior -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/gallery.js"></script>
+<script src="assets/js/music.js"></script>
+<script src="assets/js/letters.js"></script>
+</body>
+</html>
