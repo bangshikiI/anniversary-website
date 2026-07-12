@@ -1,0 +1,47 @@
+/* responsive.css — breakpoint-specific refinements beyond style.css inline media queries */
+
+/* small mobile */
+@media (max-width: 480px) {
+  .hero-tag { font-size: 2.1rem; }
+  .story-block { grid-template-columns: 1fr; }
+  .story-block.reverse .story-text,
+  .story-block.reverse .story-photo { order: initial; }
+  .player-card { flex-direction: column; text-align: center; }
+  .player-controls { justify-content: center; }
+  .letter-actions { flex-direction: column; align-items: stretch; }
+  .closing-actions { flex-direction: column; align-items: stretch; }
+}
+
+/* large mobile */
+@media (min-width: 481px) and (max-width: 767px) {
+  .story-block { grid-template-columns: 1fr; }
+  .story-block.reverse .story-text,
+  .story-block.reverse .story-photo { order: initial; }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scrapbook-grid { columns: 2; }
+  .ordinary-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* safe-area support for notched devices */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+#music-toggle {
+  top: calc(20px + env(safe-area-inset-top));
+  right: calc(20px + env(safe-area-inset-right));
+}
+
+/* avoid horizontal scroll anywhere */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* comfortable line length everywhere text-heavy */
+.story-text p, .timeline-note, .closing-body { max-width: 62ch; }
+
+/* touch target minimum */
+button, .btn, .filter-chip, .envelope-card, .gallery-item, a {
+  min-height: 40px;
+}
